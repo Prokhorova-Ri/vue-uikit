@@ -1,0 +1,51 @@
+<script setup>
+import VCheckbox from "@/components/Checkbox/VCheckbox.vue";
+
+const emit = defineEmits(["update:value"]);
+const props = defineProps({
+  value: {
+    type: Array,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  options: {
+    type: Array,
+    required: true,
+    validator: (value) => {
+      const hasNameKey = value.every((option) =>
+        Object.keys(option).includes("name")
+      );
+      const hasIdKey = value.every((option) =>
+        Object.keys(option).includes("id")
+      );
+      return hasNameKey && hasIdKey;
+    },
+  },
+});
+
+const check = (params) => {
+  let updateValue = [...props.value];
+  if (params.checked) {
+    updateValue.push(params.optionId);
+  } else {
+    updateValue.splice(updateValue.indexOff(params.optionId), 1);
+  }
+  emit("update:value", updateValue);
+};
+</script>
+
+<template>
+  <div v-for="option in options" :key="option.id">
+    <VCheckbox
+      :label="option.name"
+      :id="option.id"
+      :name="name"
+      :value="option.name"
+      :checked="value.includes(option.id)"
+      @updateCheckboxGroup="check"
+    />
+  </div>
+</template>

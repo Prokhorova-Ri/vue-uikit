@@ -1,6 +1,7 @@
 <script setup>
 import VHeader from "@/components/layout/VHeader.vue";
 import VSidebar from "@/components/layout/VSidebar.vue";
+import VCheckbox from "./views/VCheckbox.vue";
 import { ref } from "vue";
 
 const isOpenMenu = ref(false);

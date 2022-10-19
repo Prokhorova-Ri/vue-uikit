@@ -10,8 +10,8 @@ const eventForButton = () => {
   <h1 class="heading-1">Button</h1>
   <h2 class="heading-2">Disabled</h2>
   <div class="line">
-    <VButton label="Primary" color="primary" :disabled="true" />
-    <VButton label="Secondary" color="second" :disabled="true" />
+    <VButton label="Primary" color="primary" disabled />
+    <VButton label="Secondary" color="second" disabled />
   </div>
   <h2 class="heading-2">Colors</h2>
   <div class="line">
@@ -24,21 +24,21 @@ const eventForButton = () => {
   </div>
   <h2 class="heading-2">Rounded</h2>
   <div class="line">
-    <VButton label="Primary" color="primary" :rounded="true" />
-    <VButton label="Secondary" color="second" :rounded="true" />
-    <VButton label="Success" color="success" :rounded="true" />
-    <VButton label="Info" color="info" :rounded="true" />
-    <VButton label="Warning" color="warning" :rounded="true" />
-    <VButton label="Danger" color="danger" :rounded="true" />
+    <VButton label="Primary" color="primary" rounded />
+    <VButton label="Secondary" color="second" rounded />
+    <VButton label="Success" color="success" rounded />
+    <VButton label="Info" color="info" rounded />
+    <VButton label="Warning" color="warning" rounded />
+    <VButton label="Danger" color="danger" rounded />
   </div>
   <h2 class="heading-2">Outlined</h2>
   <div class="line">
-    <VButton label="Primary" color="primary" :outlined="true" />
-    <VButton label="Secondary" color="second" :outlined="true" />
-    <VButton label="Success" color="success" :outlined="true" />
-    <VButton label="Info" color="info" :outlined="true" />
-    <VButton label="Warning" color="warning" :outlined="true" />
-    <VButton label="Danger" color="danger" :outlined="true" />
+    <VButton label="Primary" color="primary" outlined />
+    <VButton label="Secondary" color="second" outlined />
+    <VButton label="Success" color="success" outlined />
+    <VButton label="Info" color="info" outlined />
+    <VButton label="Warning" color="warning" outlined />
+    <VButton label="Danger" color="danger" outlined />
   </div>
   <h2 class="heading-2">Icon</h2>
   <div class="line">
@@ -51,12 +51,12 @@ const eventForButton = () => {
   </div>
   <h2 class="heading-2">Icon Outlined</h2>
   <div class="line">
-    <VButton color="primary" icon="heart" :outlined="true" />
-    <VButton color="second" icon="hand" :outlined="true" />
-    <VButton color="success" icon="address-book" :outlined="true" />
-    <VButton color="info" icon="credit-card" :outlined="true" />
-    <VButton color="warning" icon="lemon" :outlined="true" />
-    <VButton color="danger" icon="hourglass" :outlined="true" />
+    <VButton color="primary" icon="heart" outlined />
+    <VButton color="second" icon="hand" outlined />
+    <VButton color="success" icon="address-book" outlined />
+    <VButton color="info" icon="credit-card" outlined />
+    <VButton color="warning" icon="lemon" outlined />
+    <VButton color="danger" icon="hourglass" outlined />
   </div>
   <h2 class="heading-2">Size</h2>
   <div class="line">
@@ -68,11 +68,3 @@ const eventForButton = () => {
     <VButton label="@click" color="danger" @click="eventForButton" />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.line {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-</style>
