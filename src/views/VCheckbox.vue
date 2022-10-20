@@ -14,7 +14,9 @@ const listItems = ref([
   { name: "Item Four", id: "i4" },
   { name: "Item Five", id: "i5" },
 ]);
-const selectedItems = ref(["i1"]);
+const selectedItems = ref(["i2"]);
+
+const switchProfessional = ref(false);
 </script>
 
 <template>
@@ -37,7 +39,7 @@ const selectedItems = ref(["i1"]);
       name="checkboxDisabled"
       value="QWERTY"
       :disabled="checkboxDisabled"
-      v-model:checked="checkboxDisabled"
+      v-model:checked="checkboxDisabledChecked"
     />
   </div>
   <h2 class="heading-2">Checkbox Group</h2>
@@ -47,6 +49,17 @@ const selectedItems = ref(["i1"]);
       v-model:value="selectedItems"
       name="items"
       :options="listItems"
+    />
+  </div>
+  <h2 class="heading-2">Switch</h2>
+  <p>Switch: {{ switchProfessional }}</p>
+  <div class="line line__block">
+    <VCheckbox
+      label="Professional"
+      id="switch"
+      name="switch"
+      type="switch"
+      v-model:checked="switchProfessional"
     />
   </div>
 </template>

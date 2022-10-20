@@ -31,7 +31,7 @@ const check = (params) => {
   if (params.checked) {
     updateValue.push(params.optionId);
   } else {
-    updateValue.splice(updateValue.indexOff(params.optionId), 1);
+    updateValue.splice(updateValue.indexOf(params.optionId), 1);
   }
   emit("update:value", updateValue);
 };
@@ -45,6 +45,7 @@ const check = (params) => {
       :name="name"
       :value="option.name"
       :checked="value.includes(option.id)"
+      group
       @updateCheckboxGroup="check"
     />
   </div>
