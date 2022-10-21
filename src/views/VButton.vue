@@ -1,5 +1,5 @@
 <script setup>
-import VButton from "@/components/layout/VButton.vue";
+import VButton from "@/components/VButton.vue";
 
 const eventForButton = () => {
   alert("You click danger button!");

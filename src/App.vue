@@ -1,6 +1,6 @@
 <script setup>
-import VHeader from "@/components/layout/VHeader.vue";
-import VSidebar from "@/components/layout/VSidebar.vue";
+import VHeader from "@/components/Layout/VHeader.vue";
+import VSidebar from "@/components/Layout/VSidebar.vue";
 import VCheckbox from "./views/VCheckbox.vue";
 import { ref } from "vue";
 
