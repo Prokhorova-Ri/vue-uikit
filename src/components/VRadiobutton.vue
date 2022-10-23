@@ -37,17 +37,19 @@ const handleClick = (event) => {
 </script>
 
 <template>
-  <input
-    class="radiobutton"
-    type="radio"
-    :name="name"
-    :id="id"
-    :value="value"
-    :checked="checked"
-    :disabled="disabled"
-    @input="handleClick($event)"
-  />
-  <label :for="id">{{ label }}</label>
+  <div>
+    <input
+      class="radiobutton"
+      type="radio"
+      :name="name"
+      :id="id"
+      :value="value"
+      :checked="checked"
+      :disabled="disabled"
+      @input="handleClick($event)"
+    />
+    <label :for="id">{{ label }}</label>
+  </div>
 </template>
 
 <style lang="scss" scoped>
