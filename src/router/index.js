@@ -6,6 +6,8 @@ import VCheckbox from "@/views/VCheckbox.vue";
 import VRadiobutton from "@/views/VRadiobutton.vue";
 import VProgress from "@/views/VProgress.vue";
 import VInput from "@/views/VInput.vue";
+import VTabs from "@/views/VTabs.vue";
+import VTable from "@/views/VTable.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -43,6 +45,16 @@ const router = createRouter({
       path: "/input",
       name: "Input",
       component: VInput,
+    },
+    {
+      path: "/tabs",
+      name: "Tabs",
+      component: VTabs,
+    },
+    {
+      path: "/table",
+      name: "Table",
+      component: VTable,
     },
   ],
 });
